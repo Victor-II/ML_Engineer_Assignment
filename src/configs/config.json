@@ -1,0 +1,36 @@
+{
+    "dataset": {
+        "train_split": 0.8,
+        "test_split": 0.2,
+        "dev_split": false
+    },
+    "training_args": {
+        "evaluation_strategy": "epoch",
+        "learning_rate": 1e-4,
+        "per_device_train_batch_size": 16,
+        "per_device_eval_batch_size": 16,
+        "num_training_epochs": 1,
+        "weight_decay": 1e-5,
+        "save_strategy": "epoch",
+        "output_dir": "/home/victor-ii/Desktop/ML_Assignment/models",
+        "load_best_model_at_end": true,
+        "auto_find_batch_size": false,
+        "gradient_checkpointing": true,
+        "save_steps": 25,
+        "eval_steps": 25,
+        "evaluate": true
+    },
+    "model": {
+        "num_labels": 3,
+        "id2label": {"0": "O", "1": "B-product", "2": "I-product"},
+        "label2id": {"O": 0, "B-product": 1, "I-product": 2},
+        "pretrained_model_checkpoint": "distilbert-base-uncased",
+        "inference_model_checkpoint": "/home/victor-ii/Desktop/ML_Assignment/models/best_model"
+    },
+    "paths": {
+        "dataset": "/home/victor-ii/Desktop/ML_Assignment/data/dataset.json",
+        "backup_dataset": "/home/victor-ii/Desktop/ML_Assignment/data/backups/dataset.json",
+        "urls": "/home/victor-ii/Desktop/ML_Assignment/urls.csv",
+        "results": "/home/victor-ii/Desktop/ML_Assignment/results/test.json"
+    }
+}
