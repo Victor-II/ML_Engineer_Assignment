@@ -108,6 +108,7 @@ Contains the `inference(model_checkpoint:str, data_path:str, urls_path:str, save
 ```
 
 - `plot_metrics(metrics:dict[list], save:bool=True) -> None`: Takes in the metrics returned by `get_metrics()` and plots them. Below is the plot of the above metrics:
+
 ![metrics plot](metrics_plot.png)
 
 
